@@ -18,10 +18,10 @@ variable "primary_account_id" {
   description = "Primary account from which entire execution will be done"
 }
 
-variable "iam_access_rotation_lambda_name" {
-  type        = string
-  description = "Name of IAM access keys rotation lambda"
-}
+# variable "iam_access_rotation_lambda_name" {
+#   type        = string
+#   description = "Name of IAM access keys rotation lambda"
+# }
 
 variable "org_list_role" {
   type        = string

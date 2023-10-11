@@ -4,7 +4,7 @@ resource "aws_lambda_function" "notifier_rotation_lambda" {
   role             = aws_iam_role.notifier_iam_role.arn
   handler          = "main.lambda_handler"
   source_code_hash = filemd5("${path.module}/code_sources/Lambda/notifier.zip")
-  runtime          = "python3.8"
+  runtime          = "python3.11"
   timeout          = 300
   environment {
     variables = local.lambda_variables
@@ -24,7 +24,7 @@ resource "aws_lambda_function" "access_key_rotation_lambda" {
   role             = data.aws_iam_role.rotation_execution_role.arn
   handler          = "main.lambda_handler"
   source_code_hash = filemd5("${path.module}/code_sources/Lambda/access_key_auto_rotation.zip")
-  runtime          = "python3.8"
+  runtime          = "python3.11"
   timeout          = 400
   environment {
     variables = {
@@ -66,12 +66,13 @@ resource "aws_lambda_permission" "allow_cloudwatch" {
 
 
 resource "aws_lambda_function" "account_inventory_lambda" {
+
   filename         = "${path.module}/code_sources/Lambda/account_inventory.zip"
   function_name    = local.account_inventory_lambda_function_name
   role             = aws_iam_role.account_inventory_role.arn
   handler          = "main.lambda_handler"
   source_code_hash = filemd5("${path.module}/code_sources/Lambda/account_inventory.zip")
-  runtime          = "python3.8"
+  runtime          = "python3.11"
   timeout          = 300
   environment {
     variables = {
