@@ -92,7 +92,9 @@ This solution automates the rotating of IAM access keys using Terraform, where w
 ***
 
 
-
+## Security 
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications)
+ for more information.
 
 ## License
 This project is licensed under the MIT-0 License.
