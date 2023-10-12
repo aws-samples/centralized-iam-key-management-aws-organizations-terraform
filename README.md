@@ -10,7 +10,8 @@ This solution automates the rotating of IAM access keys using Terraform, where w
 
 
 ## Architecture
-![image](/uploads/9b81e441d9369314a7672cafddcd17e5/image.png)
+![image](https://github.com/aws-samples/centralized-iam-key-management-aws-organizations-terraform/assets/65273458/0d657ede-41ae-451d-93a3-c81a66adddde)
+
 
 ## Solution workflow
 
